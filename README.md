@@ -21,6 +21,10 @@ from ... import app
 lambda_handler = api_gateway_v2_to_wsgi.make_lambda_handler(app)
 ```
 
+## sample application
+
+for a full sample, see [testing/example/README.md](testing/example/README.md)
+
 ## more information
 
 for more information on how I set up my lambda, see
