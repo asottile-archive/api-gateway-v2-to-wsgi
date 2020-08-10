@@ -1,0 +1,4 @@
+covdefaults
+coverage
+flask
+pytest
