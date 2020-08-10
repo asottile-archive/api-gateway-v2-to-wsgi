@@ -17,24 +17,6 @@ resource "aws_iam_role" "sample_app" {
   assume_role_policy = data.aws_iam_policy_document.sample_app_assume_policy_document.json
 }
 
-data "aws_iam_policy_document" "sample_app_permissions_policy_document" {
-  statement {
-    actions = [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents",
-    ]
-    resources = ["*"]
-  }
-}
-resource "aws_iam_policy" "sample_app_permissions_policy" {
-  policy = data.aws_iam_policy_document.sample_app_permissions_policy_document.json
-}
-resource "aws_iam_role_policy_attachment" "sample_app_permissions_policy_attach" {
-  role       = aws_iam_role.sample_app.name
-  policy_arn = aws_iam_policy.sample_app_permissions_policy.arn
-}
-
 resource "aws_lambda_function" "sample_app" {
   function_name = "sample_app"
   filename      = "${path.module}/data/dummy_lambda.zip"
