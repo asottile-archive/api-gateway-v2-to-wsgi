@@ -33,4 +33,7 @@ for more information on how I set up my lambda, see
 additionally, see the [api gateway documentation] (though it's not very good
 at the time of writing so glhf)
 
+seems the [lambda integration guide] is slightly better
+
 [api gateway documentation]: https://docs.aws.amazon.com/apigateway/index.html
+[lambda integratio guide]: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html
