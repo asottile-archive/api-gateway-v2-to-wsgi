@@ -57,7 +57,7 @@ class _Responder:
         return {
             'statusCode': self.status_code,
             'body': self.body.getvalue().decode(),
-            'multiValueHeaders': self.headers,
+            'headers': {k: ','.join(v) for k, v in self.headers.items()},
         }
 
 

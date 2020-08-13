@@ -58,9 +58,9 @@ b header: []
     assert resp == {
         'statusCode': 200,
         'body': expected_body,
-        'multiValueHeaders': {
-            'Content-Length': ['96'],
-            'Content-Type': ['text/html; charset=utf-8'],
+        'headers': {
+            'Content-Length': '96',
+            'Content-Type': 'text/html; charset=utf-8',
         },
     }
 
@@ -74,9 +74,9 @@ data: b'hi'
     assert resp == {
         'statusCode': 200,
         'body': expected_body,
-        'multiValueHeaders': {
-            'Content-Length': ['17'],
-            'Content-Type': ['text/html; charset=utf-8'],
+        'headers': {
+            'Content-Length': '17',
+            'Content-Type': 'text/html; charset=utf-8',
         },
     }
 
@@ -91,9 +91,9 @@ y param: ['3']
     assert resp == {
         'statusCode': 200,
         'body': expected_body,
-        'multiValueHeaders': {
-            'Content-Length': ['45'],
-            'Content-Type': ['text/html; charset=utf-8'],
+        'headers': {
+            'Content-Length': '45',
+            'Content-Type': 'text/html; charset=utf-8',
         },
     }
 
@@ -110,9 +110,9 @@ b header: ['3']
     assert resp == {
         'statusCode': 200,
         'body': expected_body,
-        'multiValueHeaders': {
-            'Content-Length': ['104'],
-            'Content-Type': ['text/html; charset=utf-8'],
+        'headers': {
+            'Content-Length': '104',
+            'Content-Type': 'text/html; charset=utf-8',
         },
     }
 
