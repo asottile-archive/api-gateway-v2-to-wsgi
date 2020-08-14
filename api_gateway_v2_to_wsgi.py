@@ -71,6 +71,8 @@ def _environ(event: Dict[str, Any], context: Dict[str, Any]) -> Dict[str, Any]:
     environ = {
         'CONTENT_LENGTH': len(body_b),
         'CONTENT_TYPE': event['headers'].get('content-type', ''),
+        # cookies are stripped out of the headers mapping
+        'HTTP_COOKIE': ';'.join(event.get('cookies', [])),
         'PATH_INFO': event['rawPath'],
         'QUERY_STRING': event['rawQueryString'],
         'REMOTE_ADDR': event['requestContext']['http']['sourceIp'],

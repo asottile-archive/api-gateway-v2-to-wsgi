@@ -1,0 +1,39 @@
+{
+  "version": "2.0",
+  "routeKey": "$default",
+  "rawPath": "/cookie",
+  "rawQueryString": "",
+  "cookies": [
+    "a=1",
+    "b=2"
+  ],
+  "headers": {
+    "accept": "*/*",
+    "content-length": "0",
+    "host": "8o35w2r7ec.execute-api.us-east-1.amazonaws.com",
+    "user-agent": "curl/7.68.0",
+    "x-amzn-trace-id": "Root=1-5f37194d-68e6d6005de1bf8061a0a080",
+    "x-forwarded-for": "76.14.26.166",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https"
+  },
+  "requestContext": {
+    "accountId": "952911408644",
+    "apiId": "8o35w2r7ec",
+    "domainName": "8o35w2r7ec.execute-api.us-east-1.amazonaws.com",
+    "domainPrefix": "8o35w2r7ec",
+    "http": {
+      "method": "GET",
+      "path": "/cookie",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "76.14.26.166",
+      "userAgent": "curl/7.68.0"
+    },
+    "requestId": "RSDkJhvbIAMEJNQ=",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "14/Aug/2020:23:07:57 +0000",
+    "timeEpoch": 1597446477668
+  },
+  "isBase64Encoded": false
+}
