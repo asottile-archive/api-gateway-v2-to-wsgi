@@ -39,6 +39,15 @@ y param: {flask.request.args.getlist('y')}
 '''
 
 
+@app.route('/cookie')
+def cookies_route():
+    return f'''\
+cookies route
+a cookie: {flask.request.cookies.get('a')!r}
+b cookie: {flask.request.cookies.get('b')!r}
+'''
+
+
 handler = api_gateway_v2_to_wsgi.make_lambda_handler(app)
 
 
@@ -134,3 +143,20 @@ def test_raising_error():
 
     msg, = excinfo.value.args
     assert msg == 'wat'
+
+
+def test_cookies():
+    resp = handler(_event('cookies'), {})
+    expected_body = '''\
+cookies route
+a cookie: '1'
+b cookie: '2'
+'''
+    assert resp == {
+        'statusCode': 200,
+        'body': expected_body,
+        'headers': {
+            'Content-Length': '42',
+            'Content-Type': 'text/html; charset=utf-8',
+        },
+    }
