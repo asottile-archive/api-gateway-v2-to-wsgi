@@ -49,9 +49,14 @@ aws_lambda_permission.sample_app_gateway: Creating...
 aws_lambda_permission.sample_app_gateway: Creation complete after 1s [id=terraform-20200810034859413700000003]
 
 Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+api_gateway_address = "https://l45ezct9w4.execute-api.us-east-1.amazonaws.com"
 ```
 
-the important part of this is the `id=l45ezct9w4` portion, we'll be using that later!
+the important part of this is the `api_gateway_address` portion, we'll be
+using that later!
 
 ### trying out the gateway
 

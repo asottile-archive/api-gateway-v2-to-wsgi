@@ -54,9 +54,18 @@ class _Responder:
         return self.body.write
 
     def response(self) -> Dict[str, Any]:
+        body_b = self.body.getvalue()
+        try:
+            body = body_b.decode()
+            is_base64_encoded = False
+        except UnicodeDecodeError:
+            body = base64.b64encode(body_b).decode()
+            is_base64_encoded = True
+
         return {
+            'isBase64Encoded': is_base64_encoded,
             'statusCode': self.status_code,
-            'body': self.body.getvalue().decode(),
+            'body': body,
             'headers': {k: ','.join(v) for k, v in self.headers.items()},
         }
 

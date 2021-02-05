@@ -48,6 +48,16 @@ b cookie: {flask.request.cookies.get('b')!r}
 '''
 
 
+@app.route('/image.gif')
+def image_route():
+    return flask.Response(
+        b'GIF89a\x01\x00\x01\x00\x80\x00\x00\xff\xff\xff\x00\x00\x00!\xf9'
+        b'\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02'
+        b'\x02D\x01\x00;',
+        mimetype='image/gif',
+    )
+
+
 handler = api_gateway_v2_to_wsgi.make_lambda_handler(app)
 
 
@@ -66,6 +76,7 @@ b header: []
 '''
     assert resp == {
         'statusCode': 200,
+        'isBase64Encoded': False,
         'body': expected_body,
         'headers': {
             'Content-Length': '96',
@@ -82,6 +93,7 @@ data: b'hi'
 '''
     assert resp == {
         'statusCode': 200,
+        'isBase64Encoded': False,
         'body': expected_body,
         'headers': {
             'Content-Length': '17',
@@ -99,6 +111,7 @@ y param: ['3']
 '''
     assert resp == {
         'statusCode': 200,
+        'isBase64Encoded': False,
         'body': expected_body,
         'headers': {
             'Content-Length': '45',
@@ -118,6 +131,7 @@ b header: ['3']
 '''
     assert resp == {
         'statusCode': 200,
+        'isBase64Encoded': False,
         'body': expected_body,
         'headers': {
             'Content-Length': '104',
@@ -154,9 +168,23 @@ b cookie: '2'
 '''
     assert resp == {
         'statusCode': 200,
+        'isBase64Encoded': False,
         'body': expected_body,
         'headers': {
             'Content-Length': '42',
             'Content-Type': 'text/html; charset=utf-8',
+        },
+    }
+
+
+def test_binary_reposnse():
+    resp = handler(_event('image'), {})
+    assert resp == {
+        'statusCode': 200,
+        'isBase64Encoded': True,
+        'body': 'R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==',
+        'headers': {
+            'Content-Length': '43',
+            'Content-Type': 'image/gif',
         },
     }
