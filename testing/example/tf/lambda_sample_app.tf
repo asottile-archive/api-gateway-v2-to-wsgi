@@ -38,3 +38,7 @@ resource "aws_lambda_permission" "sample_app_gateway" {
 
   source_arn = "${aws_apigatewayv2_api.sample_app_gateway.execution_arn}/*/*"
 }
+
+output "api_gateway_address" {
+  value = aws_apigatewayv2_api.sample_app_gateway.api_endpoint
+}
