@@ -37,4 +37,4 @@ at the time of writing so glhf)
 seems the [lambda integration guide] is slightly better
 
 [api gateway documentation]: https://docs.aws.amazon.com/apigateway/index.html
-[lambda integratio guide]: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html
+[lambda integration guide]: https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html
