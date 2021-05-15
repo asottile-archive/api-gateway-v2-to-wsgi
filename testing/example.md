@@ -1,6 +1,6 @@
-### dummy app
+### placeholder app
 
-I used this dummy app to get the sample events
+I used this placeholder app to get the sample events
 
 ```python
 lambda_handler = lambda event, context: event

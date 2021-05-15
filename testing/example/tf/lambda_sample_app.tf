@@ -19,7 +19,7 @@ resource "aws_iam_role" "sample_app" {
 
 resource "aws_lambda_function" "sample_app" {
   function_name = "sample_app"
-  filename      = "${path.module}/data/dummy_lambda.zip"
+  filename      = "${path.module}/data/placeholder_lambda.zip"
   role          = aws_iam_role.sample_app.arn
   handler       = "sample_app.lambda_handler"
   runtime       = "python3.8"

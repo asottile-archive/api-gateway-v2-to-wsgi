@@ -14,7 +14,7 @@ the first step is to set up the terraform infrastructure.
 
 this creates a few things:
 - the necessary iam roles your lambda will use
-- a dummy lambda (that always crashes)
+- a placeholder lambda (that always crashes)
 - the api gateway to connect to your lambda
 
 ```bash
