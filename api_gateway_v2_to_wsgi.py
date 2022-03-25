@@ -9,12 +9,9 @@ from typing import Any
 from typing import Callable
 from typing import Dict
 from typing import Iterable
-from typing import List
-from typing import Optional
 from typing import Protocol
 from typing import Tuple
 from typing import Type
-from typing import Union
 
 _ExcInfo = Tuple[Type[BaseException], BaseException, TracebackType]
 
