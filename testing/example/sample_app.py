@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import flask
 
 import api_gateway_v2_to_wsgi
