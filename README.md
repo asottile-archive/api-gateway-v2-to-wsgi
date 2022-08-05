@@ -9,7 +9,9 @@ translation from the aws api gateway v2.0 lambda event to wsgi
 
 ## installation
 
-`pip install api-gateway-v2-to-wsgi`
+```bash
+pip install api-gateway-v2-to-wsgi
+```
 
 ## usage
 
