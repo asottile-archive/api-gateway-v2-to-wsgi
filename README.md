@@ -1,5 +1,4 @@
-[![Build Status](https://dev.azure.com/asottile/asottile/_apis/build/status/asottile.api-gateway-v2-to-wsgi?branchName=main)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=73&branchName=main)
-[![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/asottile/asottile/73/main.svg)](https://dev.azure.com/asottile/asottile/_build/latest?definitionId=73&branchName=main)
+[![build status](https://github.com/asottile/api-gateway-v2-to-wsgi/actions/workflows/main.yml/badge.svg)](https://github.com/asottile/api-gateway-v2-to-wsgi/actions/workflows/main.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/api-gateway-v2-to-wsgi/main.svg)](https://results.pre-commit.ci/latest/github/asottile/api-gateway-v2-to-wsgi/main)
 
 api-gateway-v2-to-wsgi
