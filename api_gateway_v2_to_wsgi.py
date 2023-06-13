@@ -77,7 +77,7 @@ def _environ(event: dict[str, Any], context: dict[str, Any]) -> dict[str, Any]:
         body_b = body.encode()
 
     environ = {
-        'CONTENT_LENGTH': len(body_b),
+        'CONTENT_LENGTH': str(len(body_b)),
         'CONTENT_TYPE': event['headers'].get('content-type', ''),
         # cookies are stripped out of the headers mapping
         'HTTP_COOKIE': ';'.join(event.get('cookies', [])),
