@@ -1,3 +1,9 @@
+# DEPRECATED
+
+use [apig-wsgi](https://github.com/adamchainz/apig-wsgi) instead
+
+___
+
 [![build status](https://github.com/asottile/api-gateway-v2-to-wsgi/actions/workflows/main.yml/badge.svg)](https://github.com/asottile/api-gateway-v2-to-wsgi/actions/workflows/main.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/asottile/api-gateway-v2-to-wsgi/main.svg)](https://results.pre-commit.ci/latest/github/asottile/api-gateway-v2-to-wsgi/main)
 
